@@ -1,3 +1,7 @@
 .skeleton__wrap{
     line-height: 1;
 }
+
+.nft_skeleton_wrap {
+    max-height: 64px;
+}
