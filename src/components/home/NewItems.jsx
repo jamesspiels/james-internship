@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import NewItemsSlider from "./home-components/Sliders/NewItemsSlider";
-import SkeletonNewItems from "./home-components/Sliders/SkeletonNewItems";
+import NewItemsSlider from "./home-components/NewItemsComponents/NewItemsSlider";
+import SkeletonNewItems from "./home-components/NewItemsComponents/SkeletonNewItems";
 
 
 const NewItems = () => {

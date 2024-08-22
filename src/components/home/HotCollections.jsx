@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Owl from "./home-components/Sliders/Owl"
-import SkeletonLoader from "./home-components/Sliders/SkeletonLoader";
+import Owl from "./home-components/HotCollectionsComponents/HotCollectionsSlider"
+import SkeletonLoader from "./home-components/HotCollectionsComponents/SkeletonHotCollections";
 
 const HotCollections = () => {
   const [nfts, setNfts] = useState([])
