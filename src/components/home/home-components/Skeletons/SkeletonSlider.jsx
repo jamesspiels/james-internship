@@ -2,9 +2,12 @@ import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import NewItemsCard from "./NewItemsCard";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
+import SkeletonNewItems from './SkeletonNewItems';
 
-const NewItemsSlider = ({nfts}) => {
+
+const SkeletonSlider = () => {
     const options = {
         items:4,
         loop:true,
@@ -27,16 +30,16 @@ const NewItemsSlider = ({nfts}) => {
 
         }
     }
-
-    
     return ( 
         <OwlCarousel className='owl-theme' {...options}>
-            {
-                nfts.map((nft) => (
-                    <NewItemsCard nft = {nft} key = {nft.id}/>
-                ))}
+            <SkeletonNewItems />
+            <SkeletonNewItems />
+            <SkeletonNewItems />
+            <SkeletonNewItems />
+            <SkeletonNewItems />
+            <SkeletonNewItems />
         </OwlCarousel>
-     );
+    );
 }
  
-export default NewItemsSlider;
+export default SkeletonSlider;

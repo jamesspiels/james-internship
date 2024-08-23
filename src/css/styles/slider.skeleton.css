@@ -12,3 +12,28 @@
 .skeleton_author_list_pp {
     line-height: 1;
 }
+
+.skeleton__explore__container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skeleton__explore__wrap{
+    width: 25%;
+    padding: 0 12px;
+}
+
+@media(max-width: 991px) {
+    .skeleton__explore__wrap{
+        width: 50%;
+        padding: 0 12px;
+    }
+
+}
+
+@media(max-width: 575px){
+    .skeleton__explore__wrap{
+        width: 100%;
+        padding: 0 12px;
+    }
+}
