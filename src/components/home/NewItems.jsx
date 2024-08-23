@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NewItemsSlider from "./home-components/NewItemsComponents/NewItemsSlider";
-import SkeletonNewItems from "./home-components/NewItemsComponents/SkeletonNewItems";
+import SkeletonSlider from "./home-components/Skeletons/SkeletonSlider";
 
 
 const NewItems = () => {
@@ -30,7 +30,7 @@ const NewItems = () => {
           </div>
           {
             !isLoaded ? (
-              <SkeletonNewItems/>
+              <SkeletonSlider/>
             ) : (
               <NewItemsSlider nfts = {nfts}/>
             )

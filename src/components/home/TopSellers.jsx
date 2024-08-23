@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import SkeletonTopSellers from "./home-components/TopSellersComponents/SkeletonTopSellers";
+import SkeletonTopSellers from "./home-components/Skeletons/SkeletonTopSellers";
 
 const TopSellers = () => {
   const [sellers, setSellers] = useState([])

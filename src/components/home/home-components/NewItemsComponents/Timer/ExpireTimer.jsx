@@ -1,7 +1,7 @@
 import React from 'react';
 import Countdown from 'react-countdown';
 
-const Complete = () => <span>This item has expired.</span>
+const Complete = () => <span>Expired</span>
 
 const ExpireTimer = ({nft}) => {
     const expireDate = nft.expiryDate
