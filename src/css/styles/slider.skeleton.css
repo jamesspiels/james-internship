@@ -23,6 +23,10 @@
     padding: 0 12px;
 }
 
+.skeleton_btn_copy{
+    margin-left: 6px;
+}
+
 @media(max-width: 991px) {
     .skeleton__explore__wrap{
         width: 50%;
