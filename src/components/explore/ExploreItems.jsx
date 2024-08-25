@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import SkeletonNewItems from "../home/home-components/Skeletons/SkeletonNewItems.jsx";
 import NewItemsCard from "../home/home-components/NewItemsComponents/NewItemsCard.jsx";
+import SkeletonCatalog from "../home/home-components/Skeletons/author page/SkeletonAuthorItems.jsx";
 
 const ExploreItems = () => {
   const [nfts, setNfts] = useState([])
@@ -62,32 +63,7 @@ const ExploreItems = () => {
             </div>
           ))
         ) : (
-          <div className="skeleton__explore__container">
-            <div className="skeleton__explore__wrap">
-              <SkeletonNewItems />
-            </div>
-            <div className="skeleton__explore__wrap">
-              <SkeletonNewItems />
-            </div>
-            <div className="skeleton__explore__wrap">
-              <SkeletonNewItems />
-            </div>
-            <div className="skeleton__explore__wrap">
-              <SkeletonNewItems />
-            </div>
-            <div className="skeleton__explore__wrap">
-              <SkeletonNewItems />
-            </div>
-            <div className="skeleton__explore__wrap">
-              <SkeletonNewItems />
-            </div>
-            <div className="skeleton__explore__wrap">
-              <SkeletonNewItems />
-            </div>
-            <div className="skeleton__explore__wrap">
-              <SkeletonNewItems />
-            </div>   
-          </div>
+          <SkeletonCatalog />
         )
       }
       <div className="col-md-12 text-center"> 
