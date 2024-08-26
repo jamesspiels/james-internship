@@ -13,6 +13,7 @@ const Author = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isFollowing, setIsFollowing] = useState(false)
   const [followCount, setFollowCount] = useState(0)
+  const [profileImg, setProfileImg] = useState()  
 
   function toggleFollow(){
     if(!isFollowing){
@@ -28,6 +29,7 @@ const Author = () => {
   async function getInfo(){
     const {data} = await axios.get(`https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=${id}`)
     const {data: {nftCollection}} = await axios.get(`https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=${id}`)
+    setProfileImg(data.authorImage)
     setAuthorInfo(data)
     setNfts(nftCollection)
     if(!isLoaded){
@@ -38,7 +40,7 @@ const Author = () => {
 
   useEffect(() => {
     getInfo()
-  },[followCount])
+  },[isLoaded,followCount])
 
   return (
     <div id="wrapper">
@@ -106,7 +108,7 @@ const Author = () => {
 
                   <div className="col-md-12">
                     <div className="de_tab tab_simple">
-                        <AuthorItems nfts = {nfts}/>
+                        <AuthorItems nfts = {nfts} profile = {profileImg}/>
                     </div>
                   </div>
                 </div>

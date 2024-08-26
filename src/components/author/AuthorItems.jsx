@@ -2,8 +2,7 @@ import React from "react";
 
 import NewItemsCard from "../home/home-components/NewItemsComponents/NewItemsCard";
 
-const AuthorItems = ({nfts}) => {
-  
+const AuthorItems = ({nfts, profile}) => {
   return (
     <div className="de_tab_content">
       <div className="tab-1">
@@ -11,7 +10,7 @@ const AuthorItems = ({nfts}) => {
             {
               nfts.map((nft) => (
                 <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key = {nft.id}>
-                  <NewItemsCard nft = {nft}/>
+                  <NewItemsCard nft = {nft} authorImg = {profile}/>
                 </div>
               ))
             }

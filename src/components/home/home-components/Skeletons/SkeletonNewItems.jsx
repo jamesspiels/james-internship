@@ -1,33 +1,9 @@
 import React from 'react';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 
 
 const SkeletonNewItems = () => {
-    const options = {
-        items:4,
-        loop:true,
-        margin:12,
-        nav:true,
-        dots:false,
-        responsive: {
-            0: {
-                items:1
-            },
-            480:{
-                items:2
-            }, 
-            900:{
-                items:3
-            },
-            1200:{
-                items:4
-            }
-
-        }
-    }
     return ( 
         
             <div className="nft__item">

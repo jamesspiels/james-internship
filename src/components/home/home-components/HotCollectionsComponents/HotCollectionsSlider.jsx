@@ -4,7 +4,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link } from 'react-router-dom';
 
- const Owl = ({nfts}) => {
+ const HotCollectionsSlider = ({nfts}) => {
     const options = {
         items:4,
         loop:true,
@@ -30,10 +30,10 @@ import { Link } from 'react-router-dom';
     return ( 
     <OwlCarousel className='owl-theme' {...options}>
         {
-            nfts.map((nft, index) => (
-                <div className="nft_coll" key={index}>
+            nfts.map((nft) => (
+                <div className="nft_coll" key={nft.id}>
                     <div className="nft_wrap">
-                        <Link to={`/item-details/${nft.id}`}>
+                        <Link to={`/item-details/${nft.nftId}`}>
                         <img src={nft.nftImage} className="lazy img-fluid" alt="" />
                         </Link>
                     </div>
@@ -56,4 +56,4 @@ import { Link } from 'react-router-dom';
     );
 }
  
-export default Owl;
+export default HotCollectionsSlider;

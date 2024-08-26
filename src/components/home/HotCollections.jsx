@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Owl from "./home-components/HotCollectionsComponents/HotCollectionsSlider"
 import SkeletonLoader from "./home-components/Skeletons/SkeletonHotCollections";
+import HotCollectionsSlider from "./home-components/HotCollectionsComponents/HotCollectionsSlider";
 
 const HotCollections = () => {
   const [nfts, setNfts] = useState([])
@@ -32,7 +32,7 @@ const HotCollections = () => {
             !isLoaded ? (
               <SkeletonLoader/>
             ) : (
-              <Owl nfts = {nfts}/>
+              <HotCollectionsSlider nfts = {nfts}/>
             )
           }
         </div>

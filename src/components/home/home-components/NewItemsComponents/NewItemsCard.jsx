@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ExpireTimer from "./Timer/ExpireTimer";
 
 
-const NewItemsCard = ({nft}) => {
+const NewItemsCard = ({nft, authorImg}) => {
     return ( 
         <div className="nft__item">
             <div className="author_list_pp">
@@ -11,8 +11,13 @@ const NewItemsCard = ({nft}) => {
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 title="Creator: Monica Lucas"
-            >
-                <img className="lazy" src={nft.authorImage} alt="" />
+            >{
+                nft.authorImage ? (
+                    <img className="lazy" src={nft.authorImage} alt="" />
+                ) : (
+                    <img className="lazy" src={authorImg} alt="" />
+                )
+            }
                 <i className="fa fa-check"></i>
             </Link>
             </div>
