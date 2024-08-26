@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SkeletonLoader from "./home-components/Skeletons/SkeletonHotCollections";
 import HotCollectionsSlider from "./home-components/HotCollectionsComponents/HotCollectionsSlider";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const HotCollections = () => {
   const [nfts, setNfts] = useState([])
@@ -20,7 +23,7 @@ const HotCollections = () => {
 
   return (
     <section id="section-collections" className="no-bottom">
-      <div className="container">
+      <div className="container" data-aos = "fade-in" data-aos-duration = "1000" data-aos-once="true">
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
