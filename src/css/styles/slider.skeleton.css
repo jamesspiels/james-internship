@@ -27,12 +27,27 @@
     margin-left: 6px;
 }
 
+.skeleton_item_author {
+    line-height: 1;
+}
+.skeleton_item_info{
+    line-height: 1;
+}
+.skeleton_nft-big{
+    height: 550px;
+}
+
 @media(max-width: 991px) {
     .skeleton__explore__wrap{
         width: 50%;
         padding: 0 12px;
     }
 
+}
+@media(max-width:768px) {
+    .skeleton_nft-big{
+        height: 300px;
+    }
 }
 
 @media(max-width: 575px){
