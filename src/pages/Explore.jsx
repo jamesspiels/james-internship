@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import SubHeader from "../images/subheader.jpg";
 import ExploreItems from "../components/explore/ExploreItems";
-import SkeletonNewItems from "../components/home/home-components/Skeletons/SkeletonNewItems";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Explore = () => {
 
@@ -32,7 +34,7 @@ const Explore = () => {
         </section>
 
         <section aria-label="section">
-          <div className="container">
+          <div className="container" data-aos = "fade-in" data-aos-duration = "1900" data-aos-once="true"> 
             <div className="row">
               <ExploreItems />
             </div>

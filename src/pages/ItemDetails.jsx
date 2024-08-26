@@ -3,6 +3,9 @@ import EthImage from "../images/ethereum.svg";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import SkeletonItemDetails from "../components/home/home-components/Skeletons/SkeletonItemDetails";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const ItemDetails = () => {
   const {nftId} = useParams() 
@@ -28,9 +31,9 @@ const ItemDetails = () => {
           
           {
             isLoaded ? (
-              <div className="container">
+              <div className="container" >
                 <div className="row">
-                  <div className="col-md-6 text-center">
+                  <div className="col-md-6 text-center" data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1500">
                     <img
                       src={nftDetails.nftImage}
                       className="img-fluid img-rounded mb-sm-30 nft-image"
@@ -39,9 +42,9 @@ const ItemDetails = () => {
                   </div>
                   <div className="col-md-6">
                     <div className="item_info">
-                      <h2>{nftDetails.title}</h2>
+                      <h2 data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1500" data-aos-delay = "0">{nftDetails.title}</h2>
 
-                      <div className="item_info_counts">
+                      <div className="item_info_counts" data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1500" data-aos-delay = "150">
                         <div className="item_info_views">
                           <i className="fa fa-eye"></i>
                           {nftDetails.views}
@@ -51,11 +54,11 @@ const ItemDetails = () => {
                           {nftDetails.likes}
                         </div>
                       </div>
-                      <p>
+                      <p data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1500" data-aos-delay = "300">
                         {nftDetails.description}
                       </p>
                       <div className="d-flex flex-row">
-                        <div className="mr40">
+                        <div className="mr40" data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1500" data-aos-delay = "450">
                           <h6>Owner</h6>
                           <div className="item_author">
                             <div className="author_list_pp">
@@ -72,7 +75,7 @@ const ItemDetails = () => {
                         <div></div>
                       </div>
                       <div className="de_tab tab_simple">
-                        <div className="de_tab_content">
+                        <div className="de_tab_content" data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1500" data-aos-delay = "600">
                           <h6>Creator</h6>
                           <div className="item_author">
                             <div className="author_list_pp">
@@ -87,8 +90,8 @@ const ItemDetails = () => {
                           </div>
                         </div>
                         <div className="spacer-40"></div>
-                        <h6>Price</h6>
-                        <div className="nft-item-price">
+                        <h6 data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1500" data-aos-delay = "750">Price</h6>
+                        <div className="nft-item-price" data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1500" data-aos-delay = "900">
                           <img src={EthImage} alt="" />
                           <span>{nftDetails.price}</span>
                         </div>

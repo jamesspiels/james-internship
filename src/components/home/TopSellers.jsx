@@ -20,7 +20,7 @@ const TopSellers = () => {
 
   return (
     <section id="section-popular" className="pb-5">
-      <div className="container">
+      <div className="container" >
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
@@ -28,7 +28,7 @@ const TopSellers = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <div className="col-md-12">
+          <div className="col-md-12" data-aos = "fade-in" data-aos-duration = "1000" data-aos-delay = "200" data-aos-once="true">
             <ol className="author_list">
               {
                 isLoaded ? (
