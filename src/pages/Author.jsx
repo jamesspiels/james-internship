@@ -39,6 +39,7 @@ const Author = () => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     getInfo()
   },[isLoaded,followCount])
 
@@ -61,7 +62,7 @@ const Author = () => {
             isLoaded ? (
               <div className="container">
                 <div className="row">
-                  <div className="col-md-12">
+                  <div className="col-md-12" data-aos ="fade-up" data-aos-once="true" data-aos-duration = "1200" data-aos-delay = "0">
                     <div className="d_profile de-flex">
                       <div className="de-flex-col">
                         <div className="profile_avatar">
@@ -87,14 +88,14 @@ const Author = () => {
                           {
                             !isFollowing ? (
                               <>
-                                <div className="profile_follower">{followCount}</div>
+                                <div className="profile_follower">{followCount} Followers</div>
                                 <Link to="#" className="btn-main" onClick={toggleFollow}>
                                   Follow
                                 </Link>
                               </>
                             ) : (
                               <>
-                              <div className="profile_follower">{followCount}</div>
+                              <div className="profile_follower">{followCount} Followers</div>
                                 <Link to="#" className="btn-main" onClick={toggleFollow}>
                                   Unfollow
                                 </Link>
@@ -106,7 +107,7 @@ const Author = () => {
                     </div>
                   </div>
 
-                  <div className="col-md-12">
+                  <div className="col-md-12" data-aos ="fade-in" data-aos-once="true" data-aos-duration = "1500" data-aos-delay = "300">
                     <div className="de_tab tab_simple">
                         <AuthorItems nfts = {nfts} profile = {profileImg}/>
                     </div>
