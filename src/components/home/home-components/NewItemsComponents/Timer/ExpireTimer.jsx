@@ -25,7 +25,7 @@ const ExpireTimer = ({nft}) => {
                         renderer={renderer}
                     />
                 ) : (
-                    <span>Does not expire</span>
+                    <span>Expired</span>
                 )
             }
         </> 
